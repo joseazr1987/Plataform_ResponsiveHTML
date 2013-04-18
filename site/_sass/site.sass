@@ -1,24 +1,21 @@
 @import "compass/reset"
 @import "compass/css3"
 
+/* reset */
+\:focus
+	outline: 0
+
+*
+	box-sizing: border-box
+
 $font: "Helvetica Neue", Helvetica, Arial, sans-serif
-$icon-user: url("../images/user.png") 5px 1px no-repeat
+$icon-configuration: url("../images/configuration.png")
+$icon-home: url("../images/home.png")
+$icon-ticket: url("../images/ticket.png")
+$icon-user: url("../images/user.png")
 
-@-webkit-viewport
+@-webkit-viewport, @-moz-viewport, @-ms-viewport, @-o-viewport, @viewport
 	width: device-width
-
-@-moz-viewport
-	width: device-width
-
-@-ms-viewport
-	width: device-width
-
-@-o-viewport
-	width: device-width
-
-@viewport
-	width: device-width
-
 
 html, body 
 	min-height: 100%
@@ -32,6 +29,24 @@ body
 	background: url("../images/debut_dark.png")
 	color: #666
 	font: 100%/1.5 $font
+
+
+@mixin icon-position-repeat()
+	background-position: 5px 3px
+	background-repeat: no-repeat 
+	
+.icon.home
+	background-image: $icon-home
+	@include icon-position-repeat
+.icon.configuration
+	background-image: $icon-configuration
+	@include icon-position-repeat
+.icon.ticket
+	background-image: $icon-ticket
+	@include icon-position-repeat
+.icon.user
+	background-image: $icon-user
+	@include icon-position-repeat
 
 a
 	color: #AAA
@@ -51,15 +66,15 @@ aside
 		display: block
 		border-bottom: 1px solid rgba(0,0,0,.1)
 		border-top: 1px solid rgba(255,255,255,.1)
-		background: $icon-user
 		+single-transition(all, 0.3s, ease)
 		&:hover
-			background: rgba(255, 255, 255, .1) $icon-user
+			background: rgba(255, 255, 255, .1)
+		&:focus
+			background: rgba(255, 255, 255, .1)
 
 ul .active a
 	color: #FFF
-	background: rgba(0, 0, 0, .3) $icon-user
-
+	background: rgba(0, 0, 0, .3)
 
 .main
 	+box-sizing(border-box)
@@ -88,7 +103,6 @@ ul .active a
 
 @media screen and (min-width:480px) and (max-width: 40em) // 600px
 	aside
-		background: $icon-user
 		text-indent: -99999px
 		width: 3em
 	.main
@@ -102,10 +116,10 @@ ul .active a
 
 @media screen and (min-width: 40em) and (max-width: 76em) // 1216px
 	aside
-		width: 8em
+		width: 10em
 	.main
 		width: auto
-		left: 8em
+		left: 10em
 
 @media (max-width: 480px) // moviles
 	.js aside
@@ -124,7 +138,6 @@ ul .active a
 			background: transparent
 		.active a:hover
 			color: #FFF
-			background: rgba(0,0,0,.3) $icon-user
 			
 	#toggle
 		-webkit-touch-callout: none
@@ -136,7 +149,7 @@ ul .active a
 		width: 70px
 		height: 55px
 		float: right
-		margin: 0 -2em 1em 0
+		margin: -.8em -2em 1em 0
 		text-indent: -9999px
 		overflow: hidden
 		background: #444 url("../images/hamburger.gif") 50% 33% no-repeat
@@ -144,18 +157,18 @@ ul .active a
 	.main
 		-webkit-overflow-scrolling: auto
 		border-radius: 0
-		box-shadow: none
 		overflow: hidden
-		padding: 0 2em 2em
+		padding: 0 1.8em 0em
 		position: relative
 		width: 100%
+		top: 0
 		&::-webkit-scrollbar
 			background-color: transparent
 
 
 @media screen and (min-width: 76em)
 	#nav
-		width: 18em
+		width: 12em
 	.main
 		width: auto
-		left: 18em
+		left: 12em
