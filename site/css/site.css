@@ -1,0 +1,61 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+@-webkit-viewport { width: device-width; }
+
+@-moz-viewport { width: device-width; }
+
+@-ms-viewport { width: device-width; }
+
+@-o-viewport { width: device-width; }
+
+@viewport { width: device-width; }
+
+html, body { min-height: 100%; }
+
+body { min-height: 290px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; background: url("../images/debut_dark.png"); color: #666666; font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a { color: #aaaaaa; text-decoration: none; }
+a:active, a:hover { outline: 0; }
+
+aside { position: relative; top: 2em; left: 0; }
+aside ul li a { font-weight: bold; text-shadow: 0 -1px rgba(0, 0, 0, 0.5); width: 100%; padding: 0.6em 3em; display: block; border-bottom: 1px solid rgba(0, 0, 0, 0.1); border-top: 1px solid rgba(255, 255, 255, 0.1); background: url("../images/user.png") 5px 1px no-repeat; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+aside ul li a:hover { background: rgba(255, 255, 255, 0.1) url("../images/user.png") 5px 1px no-repeat; }
+
+ul .active a { color: white; background: rgba(0, 0, 0, 0.3) url("../images/user.png") 5px 1px no-repeat; }
+
+.main { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-overflow-scrolling: touch; padding: 3em 4em; position: fixed; overflow: hidden; overflow-y: scroll; border-top-left-radius: 5px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); top: 0.8em; right: 0; bottom: 0; width: 90%; background: white; }
+.main::-webkit-scrollbar { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: rgba(0, 0, 0, 0.15); width: 8px; height: 8px; }
+.main::-webkit-scrollbar-thumb { -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; }
+
+#toggle { display: none; }
+
+@media screen and (min-width: 480px) and (max-width: 40em) { aside { background: url("../images/user.png") 5px 1px no-repeat; text-indent: -99999px; width: 3em; }
+  .main { -webkit-overflow-scrolling: auto; box-shadow: none; width: auto; left: 3em; overflow: hidden; }
+  .main::-webkit-scrollbar { background-color: transparent; } }
+@media screen and (min-width: 40em) and (max-width: 76em) { aside { width: 8em; }
+  .main { width: auto; left: 8em; } }
+@media (max-width: 480px) { .js aside { clip: rect(0 0 0 0); max-height: 0; position: absolute; display: block; overflow: hidden; }
+  aside { top: 0; width: 100%; position: relative; }
+  aside.opened { max-height: 9999px; }
+  aside a:hover { background: transparent; }
+  aside .active a:hover { color: white; background: rgba(0, 0, 0, 0.3) url("../images/user.png") 5px 1px no-repeat; }
+  #toggle { -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; display: block; width: 70px; height: 55px; float: right; margin: 0 -2em 1em 0; text-indent: -9999px; overflow: hidden; background: #444444 url("../images/hamburger.gif") 50% 33% no-repeat; }
+  .main { -webkit-overflow-scrolling: auto; border-radius: 0; box-shadow: none; overflow: hidden; padding: 0 2em 2em; position: relative; width: 100%; }
+  .main::-webkit-scrollbar { background-color: transparent; } }
+@media screen and (min-width: 76em) { #nav { width: 18em; }
+  .main { width: auto; left: 18em; } }
