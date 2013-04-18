@@ -1,8 +1,4 @@
-<style>
-	h1 {
-		font-size: 10px;
-	}
-</style>
+Diseño de un entorno de administracion
+==
 
-
-<h1>Entorno virual de administracion web</h1>
+> La interfaz es basada en la apariencia que tienen las intefaces de administracion de una mac
