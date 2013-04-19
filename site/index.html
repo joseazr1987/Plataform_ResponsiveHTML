@@ -21,7 +21,19 @@
 		<a href="#nav" id="toggle">Menu</a>
 	</div>
 	<script>
-      var navigation = responsiveNav("#nav", {customToggle: "#toggle"});
+		//var navigation = responsiveNav("#nav", {customToggle: "#toggle"});
+		var navigation = responsiveNav("#nav", {
+			customToggle: "#toggle",
+			init: function () {
+		  		console.log("Responsive Nav Inited!");
+			},
+			open: function () {
+		  		console.log("Opening…");
+			},
+			close: function () {
+		  		console.log("Closing…");
+			}
+		});
     </script>
 </body>
 </html>
